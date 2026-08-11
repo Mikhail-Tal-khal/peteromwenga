@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --grid-line: rgba(30, 76, 65, 0.07);
+  --grid-line-strong: rgba(30, 76, 65, 0.13);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #edf1ea;
+  color: #0f231e;
+  /* Exercise-book squares: 8mm minor grid, 40mm major grid. */
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px, 160px 160px, 160px 160px;
+}
+
+::selection {
+  background: #c8912a;
+  color: #fbfcf9;
+}
+
+*:focus-visible {
+  outline: 2px solid #c8912a;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@layer components {
+  /* Map-legend eyebrow used above every section heading. */
+  .legend {
+    @apply font-mono text-[11px] uppercase tracking-legend text-moss;
+  }
+
+  .rule {
+    @apply h-px w-full bg-hairline;
+  }
+
+  .section-pad {
+    @apply px-6 py-20 sm:px-10 md:py-28;
+  }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero contour drift */
+@keyframes drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-1.2%, -1.6%, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.drift {
+  animation: drift 34s ease-in-out infinite;
+  transform-origin: 60% 45%;
+}
+
+/* Contour lines draw themselves in on load */
+@keyframes trace {
+  from {
+    stroke-dashoffset: var(--dash);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.trace {
+  stroke-dasharray: var(--dash);
+  stroke-dashoffset: var(--dash);
+  animation: trace 2.4s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .drift,
+  .trace {
+    animation: none;
+  }
+  .trace {
+    stroke-dashoffset: 0;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
