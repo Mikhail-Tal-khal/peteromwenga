@@ -70,6 +70,9 @@ export const experience = [
   },
 ];
 
+export const educationDocumentsUrl =
+  "https://drive.google.com/drive/folders/126NSn-HnEEBDYqiI_QJ-vAdx6FbW2iK-";
+
 export const education = [
   {
     school: "Rongo University",

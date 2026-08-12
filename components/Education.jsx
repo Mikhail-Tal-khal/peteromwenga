@@ -1,6 +1,6 @@
 import Section from "./Section";
 import Reveal from "./Reveal";
-import { education } from "@/data/content";
+import { education, educationDocumentsUrl } from "@/data/content";
 
 export default function Education() {
   return (
@@ -9,7 +9,15 @@ export default function Education() {
       legend="Education"
       title="Training and certificates"
     >
-      <div className="border-t border-hairline">
+      <a
+        href={educationDocumentsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block font-body text-lg text-pine underline underline-offset-4 hover:text-ink"
+      >
+        View schooling documents &amp; certificates →
+      </a>
+      <div className="mt-6 border-t border-hairline">
         {education.map((item, i) => (
           <Reveal key={item.school} delay={i * 60}>
             <article className="grid gap-2 border-b border-hairline py-7 md:grid-cols-12 md:gap-8">
