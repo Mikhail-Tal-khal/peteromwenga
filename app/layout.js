@@ -24,11 +24,11 @@ const mono = IBM_Plex_Mono({
 export const metadata = {
   title: "Peter Omwenga — Teacher of Mathematics & Geography",
   description:
-    "Portfolio of Peter Omwenga, a qualified teacher of Mathematics and Geography based in Kisii, Kenya. B.Ed. Arts & IT, Rongo University.",
+    "Portfolio of Peter Omwenga, a qualified teacher of Mathematics and Geography based between Nairobi and Kisii, Kenya. B.Ed. Arts & IT, Rongo University.",
   openGraph: {
     title: "Peter Omwenga — Teacher of Mathematics & Geography",
     description:
-      "Qualified teacher of Mathematics and Geography, Kisii, Kenya. B.Ed. Arts & IT, Rongo University.",
+      "Qualified teacher of Mathematics and Geography, Nairobi & Kisii, Kenya. B.Ed. Arts & IT, Rongo University.",
     type: "website",
   },
 };

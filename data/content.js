@@ -6,7 +6,7 @@ export const profile = {
   role: "Teacher of Mathematics & Geography",
   tagline:
     "I teach the two subjects learners most often decide they are bad at — and I spend my time proving them wrong.",
-  location: "Kisii, Kenya",
+  location: "Nairobi & Kisii, Kenya",
   phonePrimary: "0705603250",
   phoneSecondary: "0789508216",
   email: "kevinsp843@gmail.com",
@@ -16,7 +16,7 @@ export const profile = {
 };
 
 export const about = [
-  "I am a qualified teacher of Mathematics and Geography, trained at Rongo University and most recently teaching at Maroo Esinde Secondary School in Kisii.",
+  "I am a qualified teacher of Mathematics and Geography, trained at Rongo University, who completed a teaching attachment at Maroo Esinde Senior School in Kisii, working across the 8-4-4 and CBE curricula over two school terms. I am based between Nairobi and Kisii and flexible to relocate for the right post.",
   "My classroom runs on two habits: check that every learner is actually with me before moving on, and connect each topic to something they can see outside the window. Geography makes that easy. Mathematics takes more work, so that is where I put more of it.",
   "Alongside teaching I trained in guidance and counselling, which shapes how I handle the learner who has gone quiet, fallen behind, or stopped attending. I am reliable with schedules, comfortable working with little supervision, and attentive to what individual learners need.",
 ];
@@ -46,12 +46,12 @@ export const teaching = [
 
 export const experience = [
   {
-    org: "Maroo Esinde Secondary School",
+    org: "Maroo Esinde Senior School",
     place: "Kisii",
-    title: "Teacher of Mathematics and Geography",
+    title: "Teaching Attachment — Mathematics and Geography",
     period: "May 2025 – October 2025",
     points: [
-      "Taught Mathematics and Geography, managed classes and kept records of learner progress.",
+      "Taught Mathematics and Geography across both the 8-4-4 and CBE curricula, integrating the two systems over two school terms.",
       "Served as patron of the Environmental Club and the Mathematics Club.",
       "Guided, counselled and motivated learners inside and outside the classroom.",
       "Led life skills and physical education sessions in class and on the field.",
@@ -161,7 +161,7 @@ export const references = [
   {
     name: "Mr. Mobert Aberi",
     title: "Principal",
-    org: "Maroo Esinde Secondary School, Kisii",
+    org: "Maroo Esinde Senior School, Kisii",
   },
   {
     name: "Dr. Elizabeth Khalili",

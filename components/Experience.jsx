@@ -8,7 +8,7 @@ export default function Experience() {
       id="experience"
       legend="Work"
       title="Where I have worked"
-      intro="A teaching post in Kisii, and three years of part-time online work carried alongside my degree."
+      intro="A teaching attachment in Kisii, and three years of part-time online work carried alongside my degree."
     >
       <ol className="relative border-l border-hairline pl-8 sm:pl-12">
         {experience.map((job, i) => (
